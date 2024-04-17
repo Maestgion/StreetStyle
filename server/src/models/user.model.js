@@ -37,7 +37,8 @@ const userSchmea = new mongoose.Schema(
             trim: true
         },
         isEmailVerified: {
-            type: String, 
+            type: Boolean, 
+            default: false
         },
         refreshToken: {
             type: String
@@ -111,9 +112,9 @@ userSchmea.methods.generateRandomToken = function(){
 
     const hashedToken = crypto.createHash("sha256").update(unhashedToken).digest("hex")
 
-    const expiry = Date.now() + USER_TEMPORARY_TOKEN_EXPIRY
+    const tokenExpiry = Date.now() + USER_TEMPORARY_TOKEN_EXPIRY
 
-    return {unhashedToken, hashedToken, expiry}
+    return {unhashedToken, hashedToken, tokenExpiry}
 }
 
 
