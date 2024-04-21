@@ -82,7 +82,8 @@ userSchmea.methods.generateAccessToken = function(){
         {
             _id: this._id,
             email: this.email,
-            password: this.password
+            password: this.password,
+            role: this.role            
         },
         process.env.ACCESS_TOKEN_SECRET,
         {
