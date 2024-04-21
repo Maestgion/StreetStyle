@@ -5,6 +5,10 @@ const categoryScema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true
+    }, 
+    coverImage: {
+        type: String,
+        required: true
     }
 })
 
