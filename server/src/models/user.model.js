@@ -118,5 +118,5 @@ userSchmea.methods.generateRandomToken = function(){
 }
 
 
-export const User = mongoose.model("users", userSchmea)
+export const User = mongoose.model("User", userSchmea)
 
