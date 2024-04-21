@@ -16,3 +16,27 @@ export const ProductSizeEnum = {
 }
 
 export const ProductSizeEnumValues = Object.values(ProductSizeEnum)
+
+
+export const OrderStatusEnum = {
+    PENDING: "PENDING",
+    CANCELLED: "CANCELLED",
+    DELIVERED: "DELIVERED",
+  };
+
+  export const AvailableOrderStatuses = Object.values(OrderStatusEnum);
+
+  export const PaymentProviderEnum = {
+    UNKNOWN: "UNKNOWN",
+    RAZORPAY: "RAZORPAY",
+    PAYPAL: "PAYPAL",
+  };
+  
+  export const AvailablePaymentProviders = Object.values(PaymentProviderEnum);
+
+  export const CouponTypeEnum = {
+    FLAT: "FLAT",
+    PERCENTAGE: "PERCENTAGE",
+  };
+  
+  export const AvailableCouponTypes = Object.values(CouponTypeEnum);
