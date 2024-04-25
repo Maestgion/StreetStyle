@@ -11,12 +11,12 @@ import {
     refreshAccessToken,
     getCurrentUser,
     logoutUser
-} from "../controllers/auth.controller"
+} from "../controllers/auth.controller.js"
 import {
     verifyJWT,
 verifyResourcePermission
-} from "../middlewares/auth.middleware"
-import { UserRolesEnum } from '../constants'
+} from "../middlewares/auth.middleware.js"
+import { UserRolesEnum } from '../constants.js'
 
 
 const router = Router()
@@ -43,3 +43,5 @@ router.route("/refresh-access-token").post(refreshAccessToken)
 router.route("/current-user").get(verifyJWT, getCurrentUser)
 
 router.route("/logout").post(verifyJWT, logoutUser)
+
+export default router
