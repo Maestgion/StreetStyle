@@ -13,8 +13,9 @@ const productSchema = new mongoose.Schema(
             of: String,
             required: true
         },
-        miscellaneourFeatures: {
-            type: [String]
+        miscellaneousFeatures: {
+            type: [String],
+            default: []
         },
         description: {
             type: String,
@@ -26,12 +27,21 @@ const productSchema = new mongoose.Schema(
             required: true
         },
         coverImage: {
-            type: String,
+            type: {
+                url: String,
+                public_id: String
+            },
             required: true
 
         },
         featuredImages: {
-            type: [String]
+            type: [
+                {
+                    url: String,
+                    public_id: String
+                }
+            ],
+            default: []
         },
         price: {
             type: Number,
@@ -52,7 +62,8 @@ const productSchema = new mongoose.Schema(
             required: true
         },
         careGuide: {
-            type: String
+            type: String,
+            default: ""
         }
 
     }, {timestamps: true}

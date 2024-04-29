@@ -40,3 +40,5 @@ export const OrderStatusEnum = {
   };
   
   export const AvailableCouponTypes = Object.values(CouponTypeEnum);
+
+  export const MAX_FEAT_IMAGE_COUNT = 5 
