@@ -7,7 +7,10 @@ const categoryScema = new mongoose.Schema({
         trim: true
     }, 
     coverImage: {
-        type: String,
+        type: {
+            url: String,
+            public_id: String
+        },
         required: true
     }
 })
