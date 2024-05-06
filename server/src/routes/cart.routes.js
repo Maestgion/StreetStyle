@@ -4,7 +4,7 @@ import {
 } from "../middlewares/auth.middlewares.js"
 import {
     getCartItems,
-    addToCart,
+    addOrUpdateCartItems,
     removeFromCart,
     removeAllFromCart
 
@@ -13,7 +13,7 @@ import {
 const router = Router();
 
 router.route("/add")
-      .post(verifyJWT, addToCart)
+      .post(verifyJWT, addOrUpdateCartItems)
 router.route("/remove")
       .delete(verifyJWT, removeFromCart)
 router.route("/remove-all")
